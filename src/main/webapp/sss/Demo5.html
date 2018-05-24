@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	div{
+		width:200px;
+		height:200px;
+		background-color:red;
+		position:relative;
+	}
+</style>
+<script src="../js/jquery-1.11.1.js"></script>
+<script>
+	function f1(){
+		$("div").show(3000);
+	}
+	function f2(){
+		$("div").hide(3000,function(){
+			console.log("OVER");
+		});
+		console.log("ok");
+	}
+	$(function(){
+		$("div").hover(
+				function(){
+					$(this).animate({"left":"30px"},2000);
+				},
+				function(){
+					$(this).animate({"left":"0px"},2000);
+				}
+		);
+	})
+</script>
+</head>
+<body>
+	<p>
+		<input type="button" value="显示" onclick="f1();"/>
+		<input type="button" value="隐藏" onclick="f2();"/>
+	</p>
+	<div>
+		
+	</div>
+</body>
+</html>

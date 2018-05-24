@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.big{
+		front-size:30px;
+	}
+	.importment{
+		color: #3aff46;
+	}
+</style>
+<script src="../js/jquery-1.11.1.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("p").addClass("big").addClass("importment");
+		$("p").removeClass("big").removeClass("importment");
+		console.log($("p").hasClass("big"))
+	})
+	function f1(){
+		$("p").toggleClass("importment")
+	}
+</script>
+</head>
+<body>
+	<p>jQuery专门对象样式操作提供了支持</p>
+	<input type="button" value="切换" onclick="f1();">
+</body>
+</html>
